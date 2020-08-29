@@ -1,10 +1,7 @@
 const express = require('express');
 const path = require('path');
 const bodyParser = require('body-parser');
-require('dotenv/config')
-var git = require("nodegit");
-var repoDir = "../";
-var repository;
+require('dotenv/config');
 
 const app = express();
 
