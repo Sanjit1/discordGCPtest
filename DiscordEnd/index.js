@@ -13,7 +13,8 @@ client.login(process.env.TOKEN + "");
 client.on('message', message => {
     if (message.channel.id === '749081303777017977') {
         parts = message.content.split(" ");
-        if (message.content.startsWith("m?start")) {
+        console.log(message.member.roles.cache);
+        if (message.content.startsWith("m?start") && message.member.roles.cache.find(r => r.name === "MC Admin")) {
             const data = {
                 server: parts[1],
                 action: 'start',
