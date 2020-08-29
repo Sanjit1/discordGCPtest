@@ -15,3 +15,8 @@ app.post("/webhook", (req, res) => {
     res.status(200).end() // Responding is important
 });
 
+app.get('/index.html', (req, res) => {
+    res.send('cheese');
+})
+
+app.listen(1002, () => console.log('Cheese'));
